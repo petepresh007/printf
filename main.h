@@ -7,6 +7,7 @@
 #define UNUSED(x) (void)(x)
 #define BUFF_ 1024
 
+
 /* FLAGS */
 #define F_MINUS 1
 #define F_PLUS 2
@@ -19,24 +20,24 @@
 #define S_SHORT 1
 
 /**
- * struct formt - Struct op
+ * struct fmt - Struct op
  *
- * @formt: The format.
+ * @fmt: The format.
  * @fn: The function associated.
  */
-struct formt
+struct fmt
 {
-	char formt;
+	char fmt;
 	int (*fn)(va_list, char[], int, int, int, int);
 };
 
 /**
  * typedef struct fmt fmt_t - Struct op
  *
- * @formt: The format.
+ * @fmt: The format.
  * @fm_t: The function associated.
  */
-typedef struct formt fmt_t;
+typedef struct fmt fmt_t;
 
 int _printf(const char *format, ...);
 int handle_print(const char *fmt, int *i,
@@ -113,4 +114,4 @@ int is_digit(char);
 long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
 
-#endif /* MAIN_H */
+#endif /* _MAIN_H_ */
