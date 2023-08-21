@@ -51,7 +51,7 @@ int print_string(va_list types, char buffer[],
 	while (st[longi] != '\0')
 		longi++;
 
-	if (precision >= 0 && precision < length)
+	if (precision >= 0 && precision < longi)
 		longi = precision;
 
 	if (width > longi)
